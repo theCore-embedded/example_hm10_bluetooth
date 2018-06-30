@@ -1,0 +1,109 @@
+{
+    "menu-platform": {
+        "config-name": "STM32",
+        "menu-stm32": {
+            "config-device": "STM32F407VG",
+            "config-console": "USART3",
+            "menu-clock": {
+                "config-source": "HSE",
+                "config-speed": "8000000"
+            },
+            "menu-timer": {
+                "config-source": "systick",
+                "config-freq": "50",
+                "config-owner": "user"
+            },
+            "menu-uart": {
+                "table-uart": [
+                    "USART3",
+                    "USART2"
+                ],
+                "menu-USART3": {
+                    "config-baud": 115200
+                },
+                "menu-USART2": {
+                    "config-baud": 9600
+                }
+            },
+            "menu-pins": {
+                "table-pins": [
+                    "PD8",
+                    "PD9",
+                    "PD12",
+                    "PD13",
+                    "PD14",
+                    "PD15",
+                    "PA2",
+                    "PA3"
+                ],
+                "menu-PD8": {
+                    "config-mode": "af",
+                    "config-pull": "no",
+                    "config-type": "push-pull",
+                    "config-speed": 25,
+                    "config-afsel": "AF7: USART3_TX"
+                },
+                "menu-PD9": {
+                    "config-mode": "af",
+                    "config-pull": "no",
+                    "config-type": "push-pull",
+                    "config-speed": 25,
+                    "config-afsel": "AF7: USART3_RX"
+                },
+                "menu-PD12": {
+                    "config-mode": "output",
+                    "config-pull": "no",
+                    "config-type": "push-pull",
+                    "config-speed": 25
+                },
+                "menu-PD13": {
+                    "config-mode": "output",
+                    "config-pull": "no",
+                    "config-type": "push-pull",
+                    "config-speed": 25
+                },
+                "menu-PD14": {
+                    "config-mode": "output",
+                    "config-pull": "no",
+                    "config-type": "push-pull",
+                    "config-speed": 25
+                },
+                "menu-PD15": {
+                    "config-mode": "output",
+                    "config-pull": "no",
+                    "config-type": "push-pull",
+                    "config-speed": 25
+                },
+                "menu-PA2": {
+                    "config-mode": "af",
+                    "config-pull": "no",
+                    "config-type": "push-pull",
+                    "config-speed": 25,
+                    "config-afsel": "AF7: USART2_TX"
+                },
+                "menu-PA3": {
+                    "config-mode": "af",
+                    "config-pull": "no",
+                    "config-type": "push-pull",
+                    "config-speed": 25,
+                    "config-afsel": "AF7: USART2_RX"
+                }
+            }
+        }
+    },
+    "menu-dev": {
+        "menu-hm10": {
+            "table-hm10-dev": [
+                "hm10_driver"
+            ],
+            "menu-hm10_driver": {
+                "config-uart": "USART2"
+            }
+        }
+    },
+    "menu-lib": {
+        "menu-filesystem": {
+            "config-enable": false
+        }
+    }
+}

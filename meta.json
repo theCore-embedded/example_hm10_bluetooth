@@ -1,0 +1,25 @@
+{
+    "name": "HM-10 Bluetooth demo",
+    "targets": {
+        "stm32f4_disc": {
+            "config": "stm32f4_discovery.json",
+            "description": "STM32F4 discovery board",
+            "toolchain": "arm-cm4-gnu.cmake",
+
+            "debuggers": {
+                "openocd": {
+                    "stlink-v2": {
+                        "file": "board/stm32f4discovery.cfg",
+                        "flash_address": "0x08000000",
+                        "help": "OpenOCD configuration for STLINK v2 debugger"
+                    },
+                    "stlink-v2.1": {
+                        "file": "board/stm32f429disc1.cfg",
+                        "flash_address": "0x08000000",
+                        "help": "OpenOCD configuration for STLINK v2.1 debugger"
+                    }
+                }
+            }
+        }
+    }
+}
